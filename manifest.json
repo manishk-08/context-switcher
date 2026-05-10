@@ -1,0 +1,33 @@
+ {
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [
+      {
+        "js": ["content.js"],
+        "matches": [
+          "https://claude.ai/*",
+          "https://gemini.google.com/*",
+          "https://chatgpt.com/*",
+          "https://chat.openai.com/*",
+          "https://www.perplexity.ai/*"
+        ]
+      }
+    ],
+    "description": "Capture and manage AI chat conversations across multiple platforms",
+    "host_permissions": [
+      "https://claude.ai/*",
+      "https://gemini.google.com/*",
+      "https://chatgpt.com/*",
+      "https://chat.openai.com/*",
+      "https://www.perplexity.ai/*"
+    ],
+    "manifest_version": 3,
+    "name": "AI Context Switcher",
+    "permissions": [
+      "storage",
+      "activeTab",
+      "scripting"
+    ],
+    "version": "1.0"
+  }
